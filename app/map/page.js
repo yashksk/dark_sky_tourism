@@ -5,8 +5,8 @@ import { useSearchParams } from 'next/navigation'
 import Event from "../components/map/event";
 import Place from "../components/map/place";
 export default function Map() {
-    const searchParams = useSearchParams()
-    const type = searchParams.get('type')
+    // const searchParams = useSearchParams()
+    // const type = searchParams.get('type')
     return (
         <div className={styles.page}>
             <NavBar />
@@ -20,20 +20,20 @@ export default function Map() {
                         <div className={styles.place}>Delhi</div>
                         <div>no. results</div>
                     </div>
-                    {type=="events"&&(<div className={styles.eventlist}>
+                    <div className={styles.eventlist}>
                         <Event img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024"/>
                         <Event img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024"/>
                         <Event img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024"/>
                         <Event img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024"/>
                         <Event img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024"/>
-                    </div>)}
-                    {type!="events"&&(<div className={styles.eventlist}>
+                    </div>
+                    {/* {type!="events"&&(<div className={styles.eventlist}>
                         <Place img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges"/>
                         <Place img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges"/>
                         <Place img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges"/>
                         <Place img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges"/>
                         <Place img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges"/>
-                    </div>)}
+                    </div>)} */}
                 </div>
                 <div className={styles.map}>
                 </div>
