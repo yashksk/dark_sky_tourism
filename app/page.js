@@ -20,11 +20,11 @@ export default function Home() {
         <div className={styles.sec2_title}>What do you need to find?</div>
         <div className={styles.sec2_body}>Our best destinations sorted by category</div>
         <div className={styles.types}>
-          <Link href="/map?type=observatories"><TypeCard img="img1" type="Observatories and Planeteriums" /></Link>
-          <Link href="/map?type=hotels"><TypeCard img="img1" type="Hotels and Lodges" /></Link>
-          <Link href="/map?type=sites"><TypeCard img="img1" type="Stargazing Sites" /></Link>
-          <Link href="/map?type=nature"><TypeCard img="img1" type="Nature and National Parks" /></Link>
-          <Link href="/map?type=heritage"><TypeCard img="img1" type="Heritage Sites" /></Link>
+          <Link href="/map?type=observatories"><TypeCard img="/Images/observatory.jpg" type="Observatories and Planeteriums" /></Link>
+          <Link href="/map?type=hotels"><TypeCard img="/Images/hotels.png" type="Hotels and Lodges" /></Link>
+          <Link href="/map?type=sites"><TypeCard img="/Images/stargazing.png" type="Stargazing Sites" /></Link>
+          <Link href="/map?type=nature"><TypeCard img="/Images/nature.jpg" type="Nature and National Parks" /></Link>
+          <Link href="/map?type=heritage"><TypeCard img="/Images/heritage.png" type="Heritage Sites" /></Link>
         </div>
       </div>
       <div className={styles.section3}>
