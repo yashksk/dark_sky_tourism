@@ -1,95 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+"use client"
+import styles from "../styles/Home.module.css"
+import ExpCard from "./components/expCard";
+import NavBar from "./components/navbar";
+import PlaceCard from "./components/placeCard";
+import TypeCard from "./components/typeCard";
+import Link from 'next/link'
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      <img className={styles.main_image} src="/Images/main_bg.png" />
+      <img className={styles.main_cover} src="/Images/main_cover.svg" />
+      <NavBar />
+      <div className={styles.section1}>
+        <div className={styles.sec1_title}>For Earth</div>
+        <div className={styles.sec1_body}>We at DarkSkyTourism are here to provide you with best experience of Space Exploration while you enjoy you visit.</div>
+      </div>
+      <div className={styles.division}></div>
+      <div className={styles.section2}>
+        <div className={styles.sec2_title}>What do you need to find?</div>
+        <div className={styles.sec2_body}>Our best destinations sorted by category</div>
+        <div className={styles.types}>
+          <Link href="/map?type=observatories"><TypeCard img="img1" type="Observatories and Planeteriums" /></Link>
+          <Link href="/map?type=hotels"><TypeCard img="img1" type="Hotels and Lodges" /></Link>
+          <Link href="/map?type=sites"><TypeCard img="img1" type="Stargazing Sites" /></Link>
+          <Link href="/map?type=nature"><TypeCard img="img1" type="Nature and National Parks" /></Link>
+          <Link href="/map?type=heritage"><TypeCard img="img1" type="Heritage Sites" /></Link>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.section3}>
+        <div className={styles.sec3_title}>The Most Beautiful and Dark Skies</div>
+        <div className={styles.sec3_body}>Our best destinations sorted by States</div>
+        <div className={styles.places}>
+          <PlaceCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" />
+          <PlaceCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" />
+          <PlaceCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" />
+          <PlaceCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" />
+        </div>
+        <Link href="/map?type=hotels"><div className={styles.explore}>Explore All</div></Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.section4}>
+        <img className={styles.sec4_img} src="/Images/experience.svg" />
+        <div className={styles.sec4_content}>
+          <div className={styles.discover}>
+            <div className={styles.discover_title}>Discover Experiences</div>
+            <div className={styles.discover_body}>Start exploring events and travels under the darkest and starry skies!</div>
+            <Link href="/map?type=events"><div className={styles.explore2}>Explore All</div></Link>
+          </div>
+          <ExpCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024" />
+          <ExpCard img="/Images/placeCardDummy.svg" name="Shivang's Villa" location="Delhi" type="Hotels and Lodges" dateStart="03.05.2024" dateEnd="16.05.2024" />
+        </div>
       </div>
-    </main>
+      <div className={styles.section5}>
+
+      </div>
+    </div>
   );
 }

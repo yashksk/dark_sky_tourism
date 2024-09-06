@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Space+Grotesk:wght@300..700&display=swap')
+      </style>
       <body className={inter.className}>{children}</body>
     </html>
   );

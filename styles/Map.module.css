@@ -1,0 +1,78 @@
+.page {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.outer {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.list {
+    width: 32vw;
+    height: inherit;
+    background: rgba(8, 8, 8, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map {
+    width: 68vw;
+    height: inherit;
+    background-color: grey;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    height: 3.14vw;
+    width: inherit;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.15vw;
+    font-weight: 500;
+    line-height: 125%;
+    text-align: left;
+
+}
+
+.categ {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(229, 229, 229, 1);
+    cursor: pointer;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+.listTop {
+    margin-top: 2.06vw;
+    margin-bottom: 1.15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 24.94vw;
+}
+
+.place {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.62vw;
+    font-weight: 500;
+    line-height: 125%;
+    text-align: left;
+}
+
+.eventlist{
+    overflow-y: scroll;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.38vw;
+}

@@ -1,0 +1,26 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.21vw;
+    width: 13.8vw;
+    cursor: pointer;
+}
+
+.image {
+    width: inherit;
+    aspect-ratio: 0.9;
+    background-color: gray;
+}
+
+.name {
+    width: inherit;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.38vw;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+}
+
+.outer:hover{
+    scale: 1.05;
+}
